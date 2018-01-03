@@ -19,11 +19,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
+SECRET_KEY = '!fc$u9_9*wlf45yz^xoi=7uqsf!1k570q34v9l1)l!6biy40j0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = False
+DEBUG = True
+# DEBUG = False
 TESTING = len(sys.argv) > 1 and sys.argv[1] == 'test'
 
 # ALLOWED_HOSTS = []
@@ -93,9 +93,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'djangoblog',
-        'USER': os.environ.get('DJANGO_MYSQL_USER'),
-        'PASSWORD': os.environ.get('DJANGO_MYSQL_PASSWORD'),
-        'HOST': os.environ.get('DJANGO_MYSQL_HOST'),
+        'USER': 'root',
+        'PASSWORD': 'mysql',
+        'HOST': '127.0.0.1',
         'PORT': 3306,
     }
 }
@@ -160,9 +160,9 @@ LOGIN_URL = '/login/'
 TIME_FORMAT = '%Y-%m-%d %H:%M:%S'
 DATE_TIME_FORMAT = '%Y-%m-%d'
 
-SITE_NAME = '且听风吟'
+SITE_NAME = '卡其嘛'
 SITE_URL = 'http://www.lylinux.net'
-SITE_DESCRIPTION = '大巧无工,重剑无锋.'
+SITE_DESCRIPTION = '心有山海,静而无边.'
 SITE_SEO_DESCRIPTION = '小站主要用来分享和记录学习经验,教程,记录个人生活的点滴以及一些随笔.'
 SITE_SEO_KEYWORDS = 'linux,apache,mysql,服务器,ubuntu,shell,web,csharp,.net,asp,mac,swift,python,django'
 ARTICLE_SUB_LENGTH = 300
