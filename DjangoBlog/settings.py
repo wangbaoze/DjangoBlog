@@ -22,8 +22,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '!fc$u9_9*wlf45yz^xoi=7uqsf!1k570q34v9l1)l!6biy40j0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-# DEBUG = False
+# DEBUG = True
+DEBUG = False
 TESTING = len(sys.argv) > 1 and sys.argv[1] == 'test'
 
 # ALLOWED_HOSTS = []
@@ -149,10 +149,10 @@ HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 # 允许使用用户名或密码登录
 AUTHENTICATION_BACKENDS = ['accounts.user_login_backend.EmailOrUsernameModelBackend']
 
-STATIC_ROOT = '/var/www/DjangoBlog/static/'
-
 STATIC_URL = '/static/'
 STATICFILES = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = '/var/www/DjangoBlog/static/'
+
 
 AUTH_USER_MODEL = 'accounts.BlogUser'
 LOGIN_URL = '/login/'
@@ -162,7 +162,7 @@ DATE_TIME_FORMAT = '%Y-%m-%d'
 
 SITE_NAME = '卡其嘛'
 SITE_URL = 'http://www.lylinux.net'
-SITE_DESCRIPTION = '心有山海,静而无边.'
+SITE_DESCRIPTION = '心有山海,而无边.'
 SITE_SEO_DESCRIPTION = '小站主要用来分享和记录学习经验,教程,记录个人生活的点滴以及一些随笔.'
 SITE_SEO_KEYWORDS = 'linux,apache,mysql,服务器,ubuntu,shell,web,csharp,.net,asp,mac,swift,python,django'
 ARTICLE_SUB_LENGTH = 300
